@@ -2,7 +2,7 @@ package Day1.prime;
 
 import java.util.Scanner;
 
-public class prime {
+public class Prime {
     public static void main(String[] args) {
 
         Scanner sc=new Scanner(System.in);
@@ -20,21 +20,19 @@ public class prime {
         }
 
 
-
-
     }
 
 
     static boolean isPrime(int n)
     {
-        for (int i = 2; i < n; i++)
-            if (n % i == 0)
+        for (int i=2; i < n; i++)
+            if (n%i == 0)
                 return false;
         return true;
     }
 
     static String check(boolean res){
-        if(res==true){
+        if(res){
             String response="This is prime";
             return response;
         }

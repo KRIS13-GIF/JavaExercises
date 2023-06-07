@@ -2,7 +2,7 @@ package Day1.Ex5;
 
 import java.util.Scanner;
 
-public class main {
+public class Natural {
     public static void main(String[] args) {
 
 
@@ -10,7 +10,7 @@ public class main {
         System.out.println("Enter the nr: ");
         int nr=sc.nextInt();
         if (nr>0){
-            for (int i=0; Math.pow(2,i)<nr+1; i++){
+            for (int i=0; Math.pow(2,i)<nr; i++){
                 System.out.print(Math.pow(2,i)+" ");
             }
 
