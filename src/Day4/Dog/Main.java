@@ -1,6 +1,6 @@
 package Day4.Dog;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Dog dog=new Dog("Male", "Pitbull");
         Dog dog1=new Dog("Mike", 7, "Male", "Pitbull", 58);
