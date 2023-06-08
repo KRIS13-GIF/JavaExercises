@@ -27,7 +27,7 @@ public class Main {
                     for (Trainer t: trainer){
                         if (input.equals(t.getName())){
                             System.out.println("Your stamina is: "+ trainee.getStamina());
-                            double new_stamina=trainee.reduceStamina(50);
+                            double new_stamina=trainee.reduceStamina(t.getStamina());
                             trainee.setStamina(new_stamina);
                             System.out.println("Now your stamina is: "+ trainee.getStamina());
                         }
