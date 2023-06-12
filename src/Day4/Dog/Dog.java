@@ -17,9 +17,33 @@ public class Dog {
 
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
     public Dog(String gender, String race) {
         // call the main constructor
-        this("Default", 7, gender, "Pitbull", 25);
+        this("Default", 7, gender, race, 25);
         this.gender = gender;
         this.race = race;
     }
@@ -44,14 +68,14 @@ public class Dog {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Dog{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                ", race='" + race + '\'' +
-                ", weight=" + weight +
-                '}';
-    }
+
+//    public String toString() {
+//        return "Dog{" +
+//                "name='" + name + '\'' +
+//                ", age=" + age +
+//                ", gender='" + gender + '\'' +
+//                ", race='" + race + '\'' +
+//                ", weight=" + weight +
+//                '}';
+//    }
 }

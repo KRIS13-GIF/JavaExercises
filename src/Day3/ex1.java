@@ -1,10 +1,11 @@
 package Day3;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ex1 {
     public static void main(String[] args) {
-        HashMap<Integer, Integer> numbers = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> numbers = new HashMap<Integer, Integer>();
 
         /*
         numbers.put(0,0);
