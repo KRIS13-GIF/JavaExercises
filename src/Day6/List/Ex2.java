@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ex2 {
+public class Ex2 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int count=0;
@@ -13,12 +13,16 @@ public class ex2 {
 
         while (count<5){
             int nr=sc.nextInt();
-            list.add(nr);
-            sum+=count;
-            count++;
+            if(nr>=1 && nr<=6) {
+                list.add(nr);
+                sum += nr;
+                count++;
+            }
 
         }
-        double avg=sum/5;
+
+        System.out.println(list);
+        double avg=sum/5.0;
         System.out.println(avg);
 
     }

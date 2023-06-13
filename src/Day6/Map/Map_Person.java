@@ -2,11 +2,11 @@ package Day6.Map;
 
 import java.util.*;
 
-public class map {
+public class Map_Person {
     public static void main(String[] args) {
 
         Scanner scanner=new Scanner(System.in);
-        Map<Integer,Person> map=new HashMap<Integer,Person>();
+        Map<Integer,Person> map=new HashMap<>();
 
         int count=0;
         while (count<2){
@@ -16,7 +16,7 @@ public class map {
             String surname=scanner.next();
             System.out.println("Enter the age: ");
             int age=scanner.nextInt();
-            List<String>friends=new ArrayList<>();
+            List<String>friends=new ArrayList<>(); // refactor per Person
 
             for (int i=0; i<3; i++){
                 System.out.println("Enter name for friends: ");
@@ -30,14 +30,6 @@ public class map {
         for (int i=0; i<map.size(); i++){
             System.out.println(map.get(i));
         }
-
-
-
-
-
-
-
-
 
     }
 }

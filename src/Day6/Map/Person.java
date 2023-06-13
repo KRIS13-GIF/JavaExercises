@@ -3,12 +3,17 @@ package Day6.Map;
 import java.util.List;
 
 public class Person {
+
+    private static int count=1;
+
+    private int id;
     private String name;
     private String surname;
     private int age;
     private List friends;
 
     public Person(String name, String surname, int age, List friends) {
+        this.id=count++;
         this.name = name;
         this.surname = surname;
         this.age = age;

@@ -2,7 +2,7 @@ package Day6.Set;
 
 import java.util.*;
 
-public class sets {
+public class Sets {
     public static void main(String[] args) {
         HashSet<String> colors = new HashSet<String>();
 
@@ -16,8 +16,7 @@ public class sets {
         System.out.println(colors); // show set after removing
 
         // Here I have created an array list and used the addAll method
-        List<String>colorsList=new ArrayList<>();
-        colorsList.addAll(colors);
+        List<String> colorsList = new ArrayList<>(colors);
         System.out.println(colorsList);
 
         // using sorting default method
