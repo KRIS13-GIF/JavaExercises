@@ -5,12 +5,12 @@ import java.util.Date;
 public class Emp implements Runnable {
     private String name;
     private String time;
-    private boolean release;
+    private boolean stop = false;
 
     public Emp(String name, String time) {
         this.name = name;
         this.time = time;
-        this.release=false;
+
     }
 
     public String getName() {
@@ -34,7 +34,6 @@ public class Emp implements Runnable {
         return "Emp{" +
                 "name='" + name + '\'' +
                 ", time='" + time + '\'' +
-                ", release=" + release +
                 '}';
     }
 
@@ -43,15 +42,26 @@ public class Emp implements Runnable {
         System.out.println(this.getTime() + " come at work");
 
         try {
-            Thread.sleep(5000);
-            System.out.println(this.getName() + " is still at work");
-            Thread.sleep(6000);
-            this.release=true;    // pas kesaj duhet te dali x thread nga lista
+            while (!stop) {
+                Thread.sleep(5000);
+                System.out.println(this.getName() + " is still at work");
+                Thread.sleep(6000);
+                stop();
+            }
 
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-
     }
+
+
+    public void stop(){
+        stop=true;
+    }
+
+    public void resumeThread(){
+        stop=true;
+    }
+
+
 }
